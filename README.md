@@ -49,7 +49,7 @@ cd pixeldrain-bypasser
 npm install
 ```
 
-Create a .env.local file:
+Create a `.env.local` file:
 ```env
 UPSTASH_REDIS_REST_URL=your_upstash_redis_url
 UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
