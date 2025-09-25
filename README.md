@@ -3,7 +3,7 @@
 
 Bypass Pixeldrain & get **direct download links** without ads or limits.  
 Built with **Next.js 14, TailwindCSS, and Upstash Redis (rate limiter)**.  
-Deployed on Vercel [https://pixeldrain-bypasser.vercel.app/](https://pixeldrain-bypasser.vercel.app/).
+Deployed on Vercel [https://vercel.com/](https://vercel.com/).
 
 ---
 
