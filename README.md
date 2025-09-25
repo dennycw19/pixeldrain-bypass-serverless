@@ -21,7 +21,7 @@ Deployed on Vercel [https://pixeldrain-bypasser.vercel.app/](https://pixeldrain-
 - 📂 Supports:
   - **File**: `https://pixeldrain.com/u/...`
   - **List**: `https://pixeldrain.com/l/...`
-  - **File inside ZIP**
+  - **File inside ZIP**: `https://pixeldrain.com/api/file/.../info/zip/...`
 - ⏳ Rate limiting: **20 requests / 15 minutes**
 - 🎨 TailwindCSS-based UI
 - ⚡️ Serverless API via Next.js Route Handlers
