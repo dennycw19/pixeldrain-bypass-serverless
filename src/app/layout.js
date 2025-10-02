@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-	title: "pixeldrain-bypass",
+	title: "pixeldrain-bypasser",
 	description:
 		"Bypass Pixeldrain & dapatkan download langsung tanpa iklan. Cepat, aman, gratis. Skip limits & ads. Direct Pixeldrain download, fast & secure.",
 	keywords: [
