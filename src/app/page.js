@@ -75,9 +75,12 @@ export default function Home() {
 				<div id="result-container" className="space-y-4"></div>
 			</section>
 
-			<footer className="mt-4">
+			<footer className="mt-4 flex flex-col space-y-2">
 				<p className="text-sm text-white text-center">
 					Made with ❤️ by NeoCortexx
+				</p>
+				<p className="text-sm text-white/70 text-center">
+					NOT AFFILIATED WITH PIXELDRAIN
 				</p>
 			</footer>
 			{/* Load script.js dari public */}

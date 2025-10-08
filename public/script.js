@@ -79,7 +79,7 @@ async function generateBypass(event) {
                                     <div class="bg-gray-800 p-4 rounded-md pt-4 max-w-full">
                                         <h3 class="text-lg font-semibold text-white break-all whitespace-normal overflow-hidden">${file.name}</h3>
                                         <p class="text-gray-400">Size: ${sizeMB} MB</p>
-                                        <a href="https://pd.cybar.xyz/${file.id}" target="_blank" class="inline-flex text-center text-white bg-blue-500 rounded hover:bg-blue-600 p-1"><span class="material-symbols-outlined">download_for_offline</span>Download</a>
+                                        <a href="https://pd.1drv.eu.org/${file.id}" target="_blank" class="inline-flex text-center text-white bg-blue-500 rounded hover:bg-blue-600 p-1"><span class="material-symbols-outlined">download_for_offline</span>Download</a>
                                     </div>
                                 `;
 															})
@@ -100,7 +100,7 @@ async function generateBypass(event) {
 															1024 /
 															1024
 														).toFixed(2)} MB</p>
-                            <a href="https://pd.cybar.xyz/${
+                            <a href="https://pd.1drv.eu.org/${
 															file.id
 														}" class="inline-flex text-center text-white bg-blue-500 rounded hover:bg-blue-600 p-1"><span class="material-symbols-outlined">download_for_offline</span>Download</a>
                         </div>
@@ -120,7 +120,9 @@ async function generateBypass(event) {
 															1024 /
 															1024
 														).toFixed(2)} MB</p>
-                            <a href="https://pd.cybar.xyz/${file.id}/info/zip/${
+                            <a href="https://pd.1drv.eu.org/${
+															file.id
+														}/info/zip/${
 						file.url
 					}" class="inline-flex text-center text-white bg-blue-500 rounded hover:bg-blue-600 p-1"><span class="material-symbols-outlined">download_for_offline</span>Download</a>
                         </div>
@@ -137,7 +139,9 @@ async function generateBypass(event) {
 															1024 /
 															1024
 														).toFixed(2)} MB</p>
-                            <a href="https://pd.cybar.xyz/${file.id}/info/zip/${
+                            <a href="https://pd.1drv.eu.org/${
+															file.id
+														}/info/zip/${
 						file.url
 					}" class="inline-flex text-center text-white bg-blue-500 rounded hover:bg-blue-600 p-1"><span class="material-symbols-outlined">download_for_offline</span>Download</a>
                         </div>
