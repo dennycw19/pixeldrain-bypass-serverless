@@ -2,6 +2,7 @@
 import Image from "next/image";
 
 import Script from "next/script";
+import ServiceDownOverlay from "./components/ServiceDownOverlay";
 
 export default function Home() {
 	function handleClick(e) {
@@ -12,6 +13,7 @@ export default function Home() {
 
 	return (
 		<main className="w-full max-w-2xl mx-auto p-4 bg-zinc-400 rounded-lg shadow-md mt-10 mb-10">
+			<ServiceDownOverlay />
 			<header>
 				{/* <h1 className="text-4xl font-bold mb-6 text-white text-center text-shadow-lg border border-white rounded bg-yellow-500 p-4">🚧 UNDER DEVELOPMENT 🚧</h1> */}
 				<h1 className="text-4xl font-bold mb-2 text-white text-center text-shadow-lg">
@@ -22,6 +24,7 @@ export default function Home() {
 					style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.3)" }}
 				></div>
 			</header>
+
 			<form>
 				<div>
 					<label

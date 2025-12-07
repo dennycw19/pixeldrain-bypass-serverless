@@ -1,5 +1,6 @@
 async function generateBypass(event) {
 	event.preventDefault(); // Prevent the default form submission behavior
+
 	const urlInput = document.getElementById("url-input").value.trim();
 	const urls = urlInput
 		.split(/\r?\n/)
@@ -63,13 +64,15 @@ async function generateBypass(event) {
 			// === FIX: Cegah error jika viewer tidak ada ===
 			if (!viewer || !viewer.type) {
 				console.error("Viewer undefined:", result);
+				messageBox.classList.add("bg-red-500", "text-white");
+				messageBox.textContent = `⚠️ ${result.error || "Viewer data missing from server."}`;
 
-				resultContainer.innerHTML += `
-					<div class="p-4 bg-red-500 text-white rounded mb-4">
-						⚠️ Failed to process URL:<br>
-						<span class="text-white">${url}</span><br>
-						${result.error || "Viewer data missing from server."}
-					</div>`;
+				// resultContainer.innerHTML += `
+				// 	<div class="p-4 bg-red- font-bold text-white rounded mb-4">
+				// 		⚠️ Failed to process URL:<br>
+				// 		<span class="text-gray-300">${url}</span><br>
+				// 		${result.error || "Viewer data missing from server."}
+				// 	</div>`;
 				continue; // lanjut ke URL berikutnya
 			}
 
