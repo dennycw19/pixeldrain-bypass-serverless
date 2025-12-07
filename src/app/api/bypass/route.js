@@ -83,7 +83,13 @@ export async function POST(request) {
 		}
 
 		// === Fetch data from Pixeldrain ===
-		const response = await fetch(apiUrl, { cache: "no-store" });
+		const response = await fetch(apiUrl, {
+			cache: "no-store",
+			headers: {
+				"User-Agent":
+					"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+			},
+		});
 		if (!response.ok) {
 			return NextResponse.json(
 				{ error: "Failed to contact Pixeldrain API." },
@@ -91,7 +97,22 @@ export async function POST(request) {
 			);
 		}
 
-		const data = await response.json();
+		const raw = await response.text();
+		// -------- FIX PENTING --------
+		let data;
+		try {
+			data = JSON.parse(raw);
+		} catch (e) {
+			return NextResponse.json(
+				{
+					error: "Pixeldrain returned non-JSON (blocked): " + raw.slice(0, 200),
+				},
+				{ status: 502 }
+			);
+		}
+		// -----------------------------
+
+		// const data = await response.json();
 
 		// === Build Result ===
 		let result;
