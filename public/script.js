@@ -60,6 +60,19 @@ async function generateBypass(event) {
 				return;
 			}
 
+			// === FIX: Cegah error jika viewer tidak ada ===
+			if (!viewer || !viewer.type) {
+				console.error("Viewer undefined:", result);
+
+				resultContainer.innerHTML += `
+					<div class="p-4 bg-red-800 text-white rounded mb-4">
+						⚠️ Failed to process URL:<br>
+						<span class="text-gray-300">${url}</span><br>
+						${result.error || "Viewer data missing from server."}
+					</div>`;
+				continue; // lanjut ke URL berikutnya
+			}
+
 			if (viewer.type === "list") {
 				const { files, title } = viewer.api_response;
 				resultContainer.innerHTML += `
@@ -123,8 +136,8 @@ async function generateBypass(event) {
                             <a href="https://pd.1drv.eu.org/${
 															file.id
 														}/info/zip/${
-						file.url
-					}" class="inline-flex text-center text-white bg-blue-500 rounded hover:bg-blue-600 p-1"><span class="material-symbols-outlined">download_for_offline</span>Download</a>
+															file.url
+														}" class="inline-flex text-center text-white bg-blue-500 rounded hover:bg-blue-600 p-1"><span class="material-symbols-outlined">download_for_offline</span>Download</a>
                         </div>
                     </div>`;
 				} else {
@@ -142,8 +155,8 @@ async function generateBypass(event) {
                             <a href="https://pd.1drv.eu.org/${
 															file.id
 														}/info/zip/${
-						file.url
-					}" class="inline-flex text-center text-white bg-blue-500 rounded hover:bg-blue-600 p-1"><span class="material-symbols-outlined">download_for_offline</span>Download</a>
+															file.url
+														}" class="inline-flex text-center text-white bg-blue-500 rounded hover:bg-blue-600 p-1"><span class="material-symbols-outlined">download_for_offline</span>Download</a>
                         </div>
                     </div>`;
 				}
