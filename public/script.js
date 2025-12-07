@@ -65,9 +65,9 @@ async function generateBypass(event) {
 				console.error("Viewer undefined:", result);
 
 				resultContainer.innerHTML += `
-					<div class="p-4 bg-red-800 text-white rounded mb-4">
+					<div class="p-4 bg-red-500 text-white rounded mb-4">
 						⚠️ Failed to process URL:<br>
-						<span class="text-gray-300">${url}</span><br>
+						<span class="text-white">${url}</span><br>
 						${result.error || "Viewer data missing from server."}
 					</div>`;
 				continue; // lanjut ke URL berikutnya
